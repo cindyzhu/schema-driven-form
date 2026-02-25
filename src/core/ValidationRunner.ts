@@ -110,7 +110,7 @@ export class ValidationRunner {
 
     // Check required first
     if (required) {
-      const error = builtInValidators.required(value, { message: undefined });
+      const error = builtInValidators.required(value, { message: undefined }, values);
       if (error) return error;
     }
 

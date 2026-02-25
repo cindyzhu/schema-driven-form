@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
-import type { DynamicFormProps, FormSchema } from './types';
+import type { DynamicFormProps } from './types';
 import { FormContext } from './react/FormContext';
 import { useForm } from './react/useForm';
 import { defaultFieldComponents } from './fields';

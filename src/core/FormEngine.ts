@@ -12,7 +12,6 @@ import type {
   EffectHandler,
   ValidatorHandler,
   FormEngineAPI,
-  Effect,
 } from '../types';
 import { DependencyGraph } from './DependencyGraph';
 import { ValidationRunner } from './ValidationRunner';
@@ -661,7 +660,7 @@ export class FormEngine implements FormEngineAPI {
     this.state = { ...this.state, submitting: true, submitCount: this.state.submitCount + 1 };
     this.notify();
 
-    const { valid, errors } = await this.validate();
+    const { valid } = await this.validate();
 
     if (!valid) {
       this.state = { ...this.state, submitting: false };

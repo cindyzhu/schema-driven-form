@@ -6,7 +6,7 @@ import { FieldRenderer } from '../react/FieldRenderer';
 import { FieldWrapper } from './FieldWrapper';
 
 export const FieldArrayInput: React.FC<FieldComponentProps> = ({ field, definition }) => {
-  const { engine } = useFormContext();
+  useFormContext();
   const { fields, append, remove } = useFieldArray(field.name);
   const subFields = definition.fields ?? [];
   const canRemove = !definition.minRows || fields.length > definition.minRows;
@@ -15,7 +15,7 @@ export const FieldArrayInput: React.FC<FieldComponentProps> = ({ field, definiti
   return (
     <FieldWrapper field={field} definition={definition}>
       <div className="df-field-array">
-        {fields.map((row, index) => (
+        {fields.map((_row, index) => (
           <div key={index} className="df-field-array__row">
             <div className="df-field-array__row-fields">
               {subFields.map((subField) => (
