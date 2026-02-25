@@ -4,7 +4,7 @@ A universal, schema-driven, plugin-based dynamic form engine for React.
 
 **Schema in, data out. Everything in between is pluggable.**
 
-**[Live Demo](https://schema-driven-form-2iiw.vercel.app)**
+**<a href="https://schema-driven-form-2iiw.vercel.app" target="_blank">Live Demo</a>**
 
 ![Demo](./docs/screenshots/schema-driven-from.gif)
 
